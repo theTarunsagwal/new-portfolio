@@ -64,7 +64,7 @@ body{
 }
 .more_me{
     margin-top: 2rem;
-    padding: 0rem 0rem 0rem 2rem;
+    padding: 0rem 1.5rem 0rem 0rem;
     font-size: 1.5rem;
     display: flex;
     gap: 1rem;
@@ -73,21 +73,150 @@ body{
     border-radius: 2rem;
     border: 2px solid var(--color);
 }
-#right_arrow{
-background-color: var(--color);
-border-radius: 50%;
-padding: 1rem;
+
+.more_me #right_arrow{
+    background-color: var(--color);
+    border-radius: 50%;
+    padding: 1rem;
+}
+.more_me::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color);
+    width: 0px;
+    height: 3.7rem;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.more_me:hover::after{
+    width: 16.5rem;
+    opacity: 1;
+    transform: translate(-5px,-1px);
+    border: none;
 }
 .icon_protfolio{
     font-size: 1.2rem;
     display: flex;
     gap: 1.5rem;
+    align-items: center;
+    height: 30rem;
+    width: 9rem;
     flex-direction: column;
-}
-.icon_protfolio .bx{
-    background-color: var(--lightheme);
-    border-radius: 50%;
-    padding: 1.2rem;
     margin-right: 3rem;
 }
 
+.icon_protfolio .ic_home, .ic_user , .ic_brief , .ic_chat ,.ic_open{
+    position: relative;
+    padding: 1rem;
+    background: var(--color);
+    border-radius: 50%;
+    
+}
+
+.icon_protfolio .ic_home::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "Home";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--color);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_home:hover::after{
+    width: 150px;
+    opacity: 1;
+}
+.icon_protfolio .ic_user::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "About";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--color);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_user:hover::after{
+    width: 150px;
+    opacity: 1;
+}
+.icon_protfolio .ic_brief::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "Protofolio";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--color);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_brief:hover::after{
+    width: 180px;
+    opacity: 1;
+}
+.icon_protfolio .ic_chat::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "Blog";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--color);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_chat:hover::after{
+    width: 150px;
+    opacity: 1;
+}
+.icon_protfolio .ic_open::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "Contact";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--color);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_open:hover::after{
+    width: 170px;
+    opacity: 1;
+}
