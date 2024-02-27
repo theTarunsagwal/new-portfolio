@@ -146,6 +146,10 @@ body{
 }
 
 
+section{
+    height: 100vh;
+    width: 100%;
+}
 /* ----------------------------------------------------------------------------------- */
 .resume{
     display: flex;
@@ -224,7 +228,7 @@ color: var(--color);
 .download:hover{
     border: 4px solid var(--color);
 }
-.percent_cricle , .education_name{
+.percent_cricle{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -274,10 +278,34 @@ justify-content: center;
 gap: 1rem;
 }
 .cricle_html h1{font-size: 1.5rem;}
+.education_name{padding-top: 2rem;}
 .education_name h1{font-size: 2rem;}
+.education_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    justify-content: center;
+    grid-template-rows: 300px 300px;
+    grid-gap: 2rem;
+    padding-top: 2rem;
+}
 .education_from{
+    /* background-color: #000; */
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    gap: 2rem   ;
+}
+.line_enducation{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
+}
+.icon_line{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 #school{
     padding:1rem;
@@ -285,22 +313,14 @@ gap: 1rem;
     background-color: var(--color);
     border-radius: 50%;
 }
-.icon_line{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .lines{
-    height: 4rem;
-    width: .1rem;
+    width: .2rem;
+    height: 5rem;
     background-color: var(--color);
 }
-.degree{
-    height: 15rem;
-    width: 25rem;
-    /* border: 2px solid #fff; */
-}
+.degree{display: inline-flex;
+    flex-direction: column;
+gap: 2rem;}
 .degree h1{
     height: 2rem;
     font-size: 1.5rem;
@@ -310,11 +330,6 @@ gap: 1rem;
     background-color: var(--line);
     border-radius: 2rem;
 }
-.degree h2{
-    color: var(--bgc_light);
-    padding-top: 2rem;
-}
-section{
-    height: 100vh;
-    width: 100%;
+.degree span{
+    color: var(--lightheme);
 }
