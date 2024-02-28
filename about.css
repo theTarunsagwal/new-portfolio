@@ -26,7 +26,6 @@ body{
     gap: 1.5rem;
     align-items: center;
     height: 30rem;
-    width: 9rem;
     flex-direction: column;
     /* margin-right: 3rem; */
 }
@@ -178,7 +177,7 @@ color: var(--color);
 .personal_infos{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-top: 2rem;
 }
 .name_ul{
@@ -186,7 +185,6 @@ color: var(--color);
     gap: 2rem;
     font-weight: bolder;
     font-size: 2rem;
-    padding-left: 10rem;
     padding-top: 2rem;
     line-height: 5rem;
 }
@@ -199,7 +197,6 @@ color: var(--color);
 .personal_details h1{
     font-size: 3rem;
     text-transform: uppercase;
-    padding-right: 52rem;
 }
 .experinc{
     height: 10rem;
@@ -238,7 +235,7 @@ color: var(--color);
 }
 .cricle_per{
     display: grid;
-    grid-template-columns: repeat(4,200px);
+    grid-template-columns:auto auto auto;
     grid-auto-rows: 250px;
     justify-content: center;
     grid-gap: 7rem;
@@ -282,9 +279,9 @@ gap: 1rem;
 .education_name h1{font-size: 2rem;}
 .education_grid{
     display: grid;
-    grid-template-columns: repeat(2, 450px);
+    grid-template-columns:auto auto;
     justify-content: center;
-    grid-template-rows: 300px 300px;
+    grid-auto-rows:250px;
     grid-gap: 2rem;
     padding-top: 2rem;
 }
@@ -332,4 +329,95 @@ gap: 2rem;}
 }
 .degree span{
     color: var(--lightheme);
+}
+.menu_bar,#menu{
+    display: none;
+}
+@media (max-width:1125px) {
+    html{
+    font-size: 80%;
+    }
+}
+@media (max-width:880px) {
+    html{
+    font-size: 50%;
+    }
+    section{
+        height: 48vh;
+        width: 100%;
+    }
+    .cricle_per{
+     grid-template-columns: auto auto auto;
+    grid-auto-rows: 153px;
+    justify-content: center;
+    column-gap: 2rem;
+    }
+    .education_name {
+        padding-top: 14rem;
+    }
+    .icon_protfolio{
+        display: none;
+    }
+    #menu{
+        display: block;
+        font-size: 3rem;
+        position: absolute;
+        z-index: 1;
+       }
+       .menu_bar{
+           background-color: var(--lightheme);
+           height: 30rem;
+           width: 20rem;
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           border-radius: 1rem;
+           top: 8.5%;
+           position: absolute;
+           transform: translateX(-100%);
+           transition: transform 1s;
+        }
+        nav{
+            display: inline-flex;
+           flex-direction: column;
+            font-size: 2.5rem;
+            gap: 2rem;
+        padding-left: 2rem;
+        padding-right: 1rem;
+       }
+       .bottom{
+        display: inline-flex;
+        gap: 2rem;
+        border-bottom: 2px solid var(--line);
+       }
+       .bottom:hover{
+        border-bottom: 2px solid var(--color);
+    }
+    .menu0{
+        transform: translateX(0%);
+        transition: transform 1s;
+    }
+    
+}
+@media (max-width:525px) {
+    html{
+    font-size: 40%;
+    }
+}@media (max-width:492px) {
+    html{
+    font-size: 33%;
+    }
+    .cricle_per{
+        grid-auto-rows: 67px;
+    }
+    .education_name {
+        padding-top: 0rem;
+    }
+    .education_grid{
+        grid-auto-rows: 100px;
+        grid-gap:0;
+    }
+  section{
+    height: 39vh;
+  }
 }
