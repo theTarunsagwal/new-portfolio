@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+:root{
+    --color:#ffb400 ;
+    --white:#fff;
+    --lightheme:#2f2d2d;
+    --bgc:#111111;
+    --bgc_light:#222222;
+    --line:#252525;
+    --percent: var(--value)
+}
+body{
+    background-color: var(--bgc);
+    font-size: 80%;
+}
+section{
+    height: 100%;
+    width: 100%;
+    padding-top: 4rem;
+}
+.resume{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.resume h1{
+    text-transform: uppercase;
+    color: var(--bgc_light);
+    font-weight: 900;
+    z-index: -1;
+    top: 0rem;
+    font-size: 10rem;
+    position: absolute;
+}
+.resume h2{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 4.7rem;
+}
+.resume span{
+    text-transform: uppercase;
+    color: var(--color);
+}
+.contact{
+    display: flex;
+    align-items: center;
+}
+.contact_detail{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+.contact_detail h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+p{
+    width: 50%;
+    font-size: 1rem;
+}
+.mail,.phone {
+    display: flex;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+.mail i{
+    font-size: 2rem;
+    background-color: var(--color);
+    border-radius: 50%;
+    padding: .5rem;
+}
+.phone i{
+    font-size: 2rem;
+    background-color: var(--color);
+    border-radius: 50%;
+    padding: .5rem;
+}
+.input{
+    background-color: var(--lightheme);
+    outline: none;
+    border: none;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+}
+.icon_mode{padding-top:1rem ;}
+.icon_mode #but{
+    font-size: 1.5rem;
+    background-color: var(--line);
+    border-radius: 50%;
+    padding: .5rem;
+}
+#but:hover{
+    background-color: var(--color);
+    transform: scale(1.2);
+}
+#menu, .menu_bar{
+    display: none;
+}
+@media (max-width:1270px) {
+   .contact{
+    display: flex;
+    flex-direction: column;
+   } 
+   form{
+padding-left: 0px;
+display: flex;
+flex-direction: column;
+   }
+   .more_me{
+    padding-left: 11rem;
+   }
+body{
+    font-size: 70%;
+}
+.resume h1{
+    font-size: 7rem;
+   }
+}
+@media (max-width:720px) {
+    .icon_protfolio i{
+        display: none;
+    }
+    body{
+        font-size: 50%;
+    }
+    .contact{
+        align-items: stretch;
+    }
+    .more_me{
+        padding-left: 0rem;
+       }
+    .resume h1{
+        font-size: 4.5rem;
+       }
+       .resume h2{
+        font-size: 2rem;
+        margin-top: 2.4rem;
+       }
+    #menu{
+        display: block;
+        font-size: 3rem;
+        position: absolute;
+        z-index: 1;
+       }
+       .menu_bar{
+           background-color: var(--lightheme);
+           height: 100%;
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           border-radius: 1rem;
+           top: 0%;
+           position: absolute;
+           transform: translateX(-100%);
+           transition: transform 1s;
+        }
+        nav{
+            display: inline-flex;
+           flex-direction: column;
+            font-size: 2.5rem;
+            gap: 2rem;
+        padding-left: 2rem;
+        padding-right: 1rem;
+       }
+       .bottom{
+        display: inline-flex;
+        gap: 2rem;
+        border-bottom: 2px solid var(--line);
+       }
+       .bottom:hover{
+        border-bottom: 2px solid var(--color);
+    }
+    .colors{
+        border-bottom: 2px solid var(--color);
+    }
+    .menu0{
+        transform: translateX(0%);
+        transition: transform 1s;
+    }
+}
+@media (max-width:425px) {
+    .resume h1{
+        font-size: 3.5rem;
+    }
+    .resume h2{
+        font-size: 1rem;
+    }
+    
+}
+    /* .......................................................................................... */
+.more_me{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: none;
+    /* border: 2px solid var(--color); */
+}
+
+.more_me #telegram{
+    background-color: var(--color);
+    border-radius: 50%;
+    padding: 1rem;
+}
+.more_me::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color);
+    width: 0px;
+    height: 3.7rem;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.more_me:hover::after{
+    width: 16.5rem;
+    opacity: 1;
+    transform: translate(-5px,-1px) rotate(360deg);
+    border: none;
+    transform-origin: left;
+    border-radius: 2rem;
+}
+.icon_protfolio{
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    height: 30rem;
+    position: fixed;
+    top: 25%;
+    right: 1%;
+    z-index: 1;
+    /* width: 9rem; */
+    flex-direction: column;
+    /* margin-right: 3rem; */
+}
+
+.icon_protfolio .ic_home, .ic_user , .ic_brief , .ic_chat ,.ic_open{
+    position: relative;
+    padding: 1rem;
+    background: var(--lightheme);
+    border-radius: 50%;
+    
+}
+
+.icon_protfolio .ic_home::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "Home";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--lightheme);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_home:hover::after{
+    width: 150px;
+    opacity: 1;
+}
+.icon_protfolio .ic_user::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "About";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--lightheme);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_user:hover::after{
+    width: 150px;
+    opacity: 1;
+}
+.icon_protfolio .ic_brief::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "Protofolio";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--lightheme);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_brief:hover::after{
+    width: 180px;
+    opacity: 1;
+}
+
+.icon_protfolio .ic_open::after{
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    content: "Contact";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--color);
+    width: 0px;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.ic_open{
+    background: var(--color);
+}
+.ic_open:hover::after{
+    width: 170px;
+    opacity: 1;
+}
+

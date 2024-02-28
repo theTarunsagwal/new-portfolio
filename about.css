@@ -33,9 +33,12 @@ body{
 .icon_protfolio .ic_home, .ic_user , .ic_brief , .ic_chat ,.ic_open{
     position: relative;
     padding: 1rem;
-    background: var(--color);
+    background: var(--lightheme);
     border-radius: 50%;
     
+}
+.ic_user{
+    background: var(--color);
 }
 
 .icon_protfolio .ic_home::after{
@@ -47,7 +50,7 @@ body{
     position: absolute;
     top: 0;
     right: 20%;
-    background-color: var(--color);
+    background-color: var(--lightheme);
     width: 0px;
     height: 100%;
     border-radius: 2rem;
@@ -89,7 +92,7 @@ body{
     position: absolute;
     top: 0;
     right: 20%;
-    background-color: var(--color);
+    background-color: var(--lightheme);
     width: 0px;
     height: 100%;
     border-radius: 2rem;
@@ -101,27 +104,7 @@ body{
     width: 180px;
     opacity: 1;
 }
-.icon_protfolio .ic_chat::after{
-    display: inline-flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    content: "Blog";
-    position: absolute;
-    top: 0;
-    right: 20%;
-    background-color: var(--color);
-    width: 0px;
-    height: 100%;
-    border-radius: 2rem;
-    z-index: -1;
-    transition: 0.5s all;
-    opacity: 0;
-}
-.ic_chat:hover::after{
-    width: 150px;
-    opacity: 1;
-}
+
 .icon_protfolio .ic_open::after{
     display: inline-flex;
     align-self: center;
@@ -131,7 +114,7 @@ body{
     position: absolute;
     top: 0;
     right: 20%;
-    background-color: var(--color);
+    background-color: var(--lightheme);
     width: 0px;
     height: 100%;
     border-radius: 2rem;
@@ -366,8 +349,8 @@ gap: 2rem;}
        }
        .menu_bar{
            background-color: var(--lightheme);
-           height: 30rem;
-           width: 20rem;
+           height: 100%;
+           width: 100%;
            display: flex;
            justify-content: center;
            flex-direction: column;
@@ -391,6 +374,9 @@ gap: 2rem;}
         border-bottom: 2px solid var(--line);
        }
        .bottom:hover{
+        border-bottom: 2px solid var(--color);
+    }
+    .colors{
         border-bottom: 2px solid var(--color);
     }
     .menu0{

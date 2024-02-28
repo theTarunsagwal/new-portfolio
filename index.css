@@ -117,11 +117,12 @@ body{
 .icon_protfolio .ic_home, .ic_user , .ic_brief , .ic_chat ,.ic_open{
     position: relative;
     padding: 1rem;
-    background: var(--color);
-    border-radius: 50%;
-    
+    background: var(--lightheme);
+    border-radius: 50%;    
 }
-
+.icon_protfolio .ic_home{
+    background: var(--color);
+}
 .icon_protfolio .ic_home::after{
     display: inline-flex;
     align-self: center;
@@ -152,7 +153,7 @@ body{
     position: absolute;
     top: 0;
     right: 20%;
-    background-color: var(--color);
+    background-color: var(--lightheme);
     width: 0px;
     height: 100%;
     border-radius: 2rem;
@@ -173,7 +174,7 @@ body{
     position: absolute;
     top: 0;
     right: 20%;
-    background-color: var(--color);
+    background-color: var(--lightheme);
     width: 0px;
     height: 100%;
     border-radius: 2rem;
@@ -195,7 +196,7 @@ body{
     position: absolute;
     top: 0;
     right: 20%;
-    background-color: var(--color);
+    background-color: var(--lightheme);
     width: 0px;
     height: 100%;
     border-radius: 2rem;
@@ -257,7 +258,7 @@ body{
    .menu_bar{
        background-color: var(--lightheme);
        height: 100%;
-       width: 20rem;
+       width: 100%;
        display: flex;
        justify-content: center;
        flex-direction: column;
@@ -281,6 +282,9 @@ body{
     border-bottom: 2px solid var(--line);
    }
    .bottom:hover{
+    border-bottom: 2px solid var(--color);
+}
+.colors{
     border-bottom: 2px solid var(--color);
 }
 .menu0{
