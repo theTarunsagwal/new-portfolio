@@ -91,7 +91,7 @@ section{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-100%);
+    transform: translateY(-101%);
     position: relative;
     z-index: 200;
 }
