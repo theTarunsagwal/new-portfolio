@@ -12,6 +12,7 @@ window.addEventListener("load", (event) => {
         let upyellowone=document.querySelector(".up_yellow1")
         let downblack=document.querySelector(".down_black")
         let blackone=document.querySelector(".color_black1")
+        let spa=document.querySelector(".spa")
         loader.classList.toggle("loader");
         yellow.classList.toggle("color_yellow");
         yellowone.classList.toggle("color_yellow1");
@@ -20,6 +21,7 @@ window.addEventListener("load", (event) => {
         upyellow.classList.toggle("up_yellow");
         upyellowone.classList.toggle("up_yellow1");
         downblack.classList.toggle("down_black");
+        spa.style.display="none"
     },2500)
     console.log(timer);
   });

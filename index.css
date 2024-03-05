@@ -15,109 +15,13 @@
     --bgc_light:#222222;
     --line:#252525;
     --white:#fff;
+    --blur:#1c1c1c;
 }
 body{
     background-color: #1c1c1c;
     overflow: hidden;
 }
-.loader{
-    position: absolute;
-    background-color: #1c1c1c;
-    z-index: 50;
-    height: 100dvh;
-    width: 100vw;
-}
-.loader .color_yellow ,.color_yellow1 , .color_black ,.color_black1 {
-    background:var(--color);
-    height: 25dvh;
-    box-shadow:20px -14px 14px var(--bgc);
-    transform: translateX(100%);
-    width: 100vw;
-    transition: 1s;
-}
-.loader .up_yellow {
-    background-color:var(--);
-    box-shadow:10px -10px 24px var(--bgc);
-    height: 100dvh;
-    width: 15vw;
-    position: absolute;
-    z-index: 3;
-    top: 0%;
-    left: 10%;
-}
-.up_yellow1{
-    background-color:var(--);
-    height: 100dvh;
-    box-shadow:10px -10px 24px var(--bgc);
-    width: 15vw;
-    position: absolute;
-    z-index: 1;
-    top: 0%;
-    left: 40%;
-}
-.down_black{
-    background-color:var(--);
-    height: 100dvh;
-    box-shadow:10px -10px 24px var(--bgc);
-    width: 15vw;
-    position: absolute;
-    z-index: 3;
-    top: 0%;
-    left: 70%;
-}
-.loader .up_yellow,.down_black{
-    animation: down 1s infinite  linear;
-    transition: 1s;
-}
-.loader .up_yellow1{
-    animation: downup 1s infinite  linear;
-    transition: 1s;
 
-}
-@keyframes load {
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(00%);
-    }
-}
-@keyframes down {
-    0%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform: translateY(00%);
-    }
-}
-@keyframes downup {
-    0%{
-        transform: translateY(00%);
-    }
-    100%{
-        transform: translateY(100%);
-    }
-}
-@keyframes loadblack {
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(00%);
-    }
-}
-.color_yellow,.color_yellow1{
-    animation: load 1s infinite  linear;
-    animation-delay: .5s;
-    background:var(--);
-}
-.color_black,.color_black1{
-    animation: loadblack 1s infinite linear;
-    animation-delay: .6s;
-    position: relative;
-    z-index: 2;
-    background:var(--);
-}
 .container_section{
     display: flex;
     gap: 2rem;
@@ -332,6 +236,18 @@ body{
     .icon_protfolio , .img_container , .color_full{
         display: none;
      }
+     .loader .up_yellow{
+        left: 1%;
+        width: 10rem;
+     }
+     .loader .up_yellow1{width: 10rem;
+    left: 36%;}
+     .loader .down_black{left: 72%;
+    width: 10rem;}
+    .loader #spa{
+        top: 30%;
+    left: 36%;
+    }
     .container_section{
         display: flex;
         flex-direction: column;
