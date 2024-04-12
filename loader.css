@@ -1,5 +1,5 @@
 .loader{
-    position: absolute;
+    position: fixed;
     background-color: var(--blur);
     z-index: 50;
     height: 100dvh;
